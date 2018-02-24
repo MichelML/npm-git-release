@@ -19,7 +19,9 @@
   "Releases the specified type of release on npm and git with the appropriate tag."
   []
   (if (some #(= % release-type) ["patch" "minor" "major"])
-    (doseq [cmd cmds] (println (.write decoder (exec-sync cmd))))
+    (do
+      (doseq [cmd cmds] (println (.write decoder (exec-sync cmd))))
+      (.exit process 0))
     (do
       (throw "Wrong type of release provided. You must specify a patch, minor, or major release.")
       (.exit process 1))))
