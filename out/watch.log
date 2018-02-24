@@ -1,0 +1,25 @@
+Building ...
+java.lang.AssertionError: Assert failed: :nodejs target with :none optimizations requires a :main entry
+(not (and (= target :nodejs) (= optimizations :none) (not (contains? opts :main))))
+	at cljs.closure$check_node_target.invokeStatic(closure.clj:1966)
+	at cljs.closure$build.invokeStatic(closure.clj:2536)
+	at cljs.closure$watch$buildf__5754.invoke(closure.clj:2714)
+	at cljs.closure$watch.invokeStatic(closure.clj:2747)
+	at cljs.repl$repl_STAR_$fn__6331$fn__6336.invoke(repl.cljc:905)
+	at clojure.core$binding_conveyor_fn$fn__4676.invoke(core.clj:1938)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.lang.Thread.run(Thread.java:745)
+
+Watching paths: /Users/mimolap/Desktop/npm-git-release/src
+Change detected, recompiling ...
+java.lang.AssertionError: Assert failed: :nodejs target with :none optimizations requires a :main entry
+(not (and (= target :nodejs) (= optimizations :none) (not (contains? opts :main))))
+	at cljs.closure$check_node_target.invokeStatic(closure.clj:1966)
+	at cljs.closure$build.invokeStatic(closure.clj:2536)
+	at cljs.closure$watch$buildf__5754.invoke(closure.clj:2714)
+	at cljs.closure$watch.invokeStatic(closure.clj:2783)
+	at cljs.repl$repl_STAR_$fn__6331$fn__6336.invoke(repl.cljc:905)
+	at clojure.core$binding_conveyor_fn$fn__4676.invoke(core.clj:1938)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.lang.Thread.run(Thread.java:745)
+

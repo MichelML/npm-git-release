@@ -1,0 +1,38 @@
+{
+  "name": "npm-git-release",
+  "version": "1.0.0",
+  "description": "Easy, cross-OS commandline utility for npm and git semver-based version release",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichelML/npm-git-release.git"
+  },
+  "keywords": [
+    "npm",
+    "git",
+    "release",
+    "publish",
+    "cross-os",
+    "semver",
+    "commandline",
+    "cli",
+    "clojurescript",
+    "nodejs",
+    "node",
+    "javascript",
+    "terminal",
+    "utility",
+    "utils"
+  ],
+  "author": "Michel Moreau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MichelML/npm-git-release/issues"
+  },
+  "homepage": "https://github.com/MichelML/npm-git-release#readme"
+}
