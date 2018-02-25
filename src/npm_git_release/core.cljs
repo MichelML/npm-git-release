@@ -1,7 +1,7 @@
 (ns npm-git-release.core
   (:require
     [cljs.nodejs :as node]
-    [clojure.string :as string]
+    [clojure.string :refer [lower-case trim]]
     [cljs.test :refer-macros [deftest is testing run-tests]]
     ))
 
@@ -9,10 +9,8 @@
 
 (def process (node/require "process"))
 (def exec-sync (.. (node/require "child_process") -execSync))
-(def string-decoder (.. (node/require "string_decoder") -StringDecoder))
 
-(def decoder (string-decoder. "utf8"))
-(def release-type (-> (.. process -argv) last string/lower-case string/trim))
+(def release-type (-> (.. process -argv) last lower-case trim))
 (def cmds [(str "npm version " release-type) "git push origin master" "git push origin master --tags" "npm publish"])
 
 (defn ngr
