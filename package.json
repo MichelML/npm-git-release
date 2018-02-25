@@ -22,7 +22,8 @@
     "test": "node test.js",
     "watch": "node build.js --watch",
     "repl": "node build.js --repl",
-    "build": "node build.js"
+    "build": "node build.js",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
