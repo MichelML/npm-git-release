@@ -5,6 +5,13 @@
   "main": "main.js",
   "dependencies": {},
   "devDependencies": {},
+  "files": [
+    "out",
+    "main.js",
+    "conf.clj",
+    "build.js",
+    "src"
+  ],
   "bin": {
     "ngr": "main.js"
   },
