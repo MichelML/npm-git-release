@@ -15,6 +15,7 @@
   (if (some #(= % release-type) ["patch" "minor" "major"])
     (do
       (doseq [cmd cmds] (exec-sync cmd {:stdio "inherit" :shell true}))
+      (js/console.log "\x1b[32m" (str "\nA new " release-type " version was released successfully!"))
       (.exit process 0))
     (do
       (throw "Wrong type of release provided. You must specify a patch, minor, or major release.")
