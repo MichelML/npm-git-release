@@ -389,4 +389,5 @@ __pycache__/
 
 # project files
 out
-
+test.js
+main.js

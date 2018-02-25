@@ -16,7 +16,10 @@
     "ngr": "main.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:compile": "node build.js --test",
+    "test:watch": "node build.js --test-watch",
+    "test:full": "npm run test:compile && npm run test",
+    "test": "node test.js",
     "watch": "node build.js --watch",
     "repl": "node build.js --repl",
     "build": "node build.js"

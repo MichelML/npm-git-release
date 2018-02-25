@@ -1,28 +1,9 @@
 (ns npm-git-release.core
   (:require
-    [cljs.nodejs :as node]
-    [clojure.string :refer [lower-case trim]]
-    [cljs.test :refer-macros [deftest is testing run-tests]]
-    ))
+    [npm-git-release.ngr :refer [ngr]]
+    [cljs.nodejs :as node]))
 
 (node/enable-util-print!)
-
-(def process (node/require "process"))
-(def exec-sync (.. (node/require "child_process") -execSync))
-
-(def release-type (-> (.. process -argv) last lower-case trim))
-(def cmds [(str "npm version " release-type) "git push origin master" "git push origin master --tags" "npm publish"])
-
-(defn ngr
-  "Releases the specified type of release on npm and git with the appropriate tag."
-  []
-  (if (some #(= % release-type) ["patch" "minor" "major"])
-    (do
-      (doseq [cmd cmds] (exec-sync cmd {:stdio "inherit"}))
-      (.exit process 0))
-    (do
-      (throw "Wrong type of release provided. You must specify a patch, minor, or major release.")
-      (.exit process 1))))
 
 (defn -main [& args] (ngr))
 
