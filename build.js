@@ -14,3 +14,5 @@ execSync(
   {stdio: 'inherit', shell: true}
 )
 
+process.exit(0)
+
