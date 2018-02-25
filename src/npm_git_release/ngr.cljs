@@ -14,7 +14,7 @@
   []
   (if (some #(= % release-type) ["patch" "minor" "major"])
     (do
-      (doseq [cmd cmds] (exec-sync cmd {:stdio "inherit"}))
+      (doseq [cmd cmds] (exec-sync cmd {:stdio "inherit" :shell true}))
       (.exit process 0))
     (do
       (throw "Wrong type of release provided. You must specify a patch, minor, or major release.")
