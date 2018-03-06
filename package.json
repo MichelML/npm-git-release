@@ -8,6 +8,12 @@
   "bin": {
     "ngr": "main.js"
   },
+  "files": [
+    "out/*",
+    "out/**/**",
+    "build.js",
+    "main.js"
+  ],
   "scripts": {
     "test:compile": "node build.js --test",
     "test:watch": "node build.js --test-watch",
