@@ -1,6 +1,6 @@
 {
   "name": "npm-git-release",
-  "version": "1.5.6",
+  "version": "1.5.7",
   "description": "Easy, cross-OS commandline utility for npm and git semver-based version release",
   "main": "main.js",
   "dependencies": {},
